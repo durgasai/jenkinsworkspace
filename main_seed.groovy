@@ -1,7 +1,5 @@
 buildMonitorView('project-A'){
-    description('All jobs for project A')
-    jobs {
-        name('release-projectA')
-        regex(/project-A-.+/)
+    configure { view ->
+        view / icon(class: 'org.example.MyViewIcon')
     }
 }

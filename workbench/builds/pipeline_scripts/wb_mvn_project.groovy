@@ -1,5 +1,6 @@
 pipeline {
     stages {
+        agent any
         stage('SCM') {
             steps {
                 step([$class: 'WsCleanup'])

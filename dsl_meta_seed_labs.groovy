@@ -8,7 +8,7 @@
          }
      }
      wrappers {
-         prebuildcleanup()
+         preBuildCleanup()
      }
      steps {
          dsl {

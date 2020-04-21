@@ -7,6 +7,9 @@
              branches('*/master')
          }
      }
+     triggers {
+         upstream('seed','UNSTABLE')
+     }
      wrappers {
          preBuildCleanup()
      }

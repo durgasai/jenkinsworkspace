@@ -5,9 +5,6 @@ pipelineJob('WB_DEV_MVN_Build'){
     properties {
         githubProjectUrl('https://github.com/durgasai/mvnproject.git')
     }
-    triggers {
-        githubPush()
-    }
     definition {
         cps {
             script(readFileFromWorkspace('./workbench/builds/pipeline_scripts/wb_mvn_project.groovy'))

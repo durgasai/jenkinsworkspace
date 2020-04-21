@@ -1,4 +1,4 @@
-pipelineJob('WB_DEV_MVN_Build'){
+pipelineJob('WB_Dev_MVN_Build'){
     logRotator {
         numToKeep(5)
     }

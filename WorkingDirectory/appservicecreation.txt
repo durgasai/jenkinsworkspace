@@ -1,0 +1,115 @@
+# list the regions that are available from your Azure subscription.
+az account list-locations \
+  --query "[].{Name: name, DisplayName: displayName}" \
+  --output table
+
+# Set default region
+az configure --defaults location=westus
+
+# Create App Service
+# Generate a random number that makes your web app's domain name unique
+webappsuffix=$RANDOM
+
+# Create Bash Variables
+resourceSuffix=$RANDOM
+webName="tailspin-space-game-web-${resourceSuffix}"
+leaderboardName="tailspin-space-game-leaderboard-${resourceSuffix}"
+storageName="tailspinspacegame${resourceSuffix}"
+rgName='tailspin-space-game-rg'
+planName='tailspin-space-game-asp'
+
+# Create a resource group
+az group create --name tailspin-space-game-rg
+
+# Create an App Service plan
+az appservice plan create \
+  --name tailspin-space-game-test-asp \
+  --resource-group tailspin-space-game-rg \
+  --sku B1
+
+az appservice plan create \
+  --name tailspin-space-game-prod-asp \
+  --resource-group tailspin-space-game-rg \
+  --sku P1V2
+
+# Create the three App Service instances
+az webapp create \
+  --name tailspin-space-game-web-dev-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --plan tailspin-space-game-test-asp
+
+az webapp create \
+  --name tailspin-space-game-web-test-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --plan tailspin-space-game-test-asp
+
+az webapp create \
+  --name tailspin-space-game-web-staging-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --plan tailspin-space-game-prod-asp
+
+# List the host name and state of each App Service instance.
+
+az webapp list \
+  --resource-group tailspin-space-game-rg \
+  --query "[].{hostname: defaultHostName, state: state}" \
+  --output table
+
+# Get the name of the App Service instance that corresponds to Staging and to store the result in a Bash variable that's named staging.
+
+staging=$(az webapp list \
+  --resource-group tailspin-space-game-rg \
+  --query "[?contains(@.name, 'tailspin-space-game-web-staging')].{name: name}" \
+  --output tsv)
+
+# add a slot named swap to your staging environment
+
+az webapp deployment slot create \
+  --name $staging \
+  --resource-group tailspin-space-game-rg \
+  --slot swap
+
+#  list your deployment slot's host name.
+
+az webapp deployment slot list \
+  --name $staging \
+  --resource-group tailspin-space-game-rg \
+  --query [].hostNames \
+  --output tsv
+
+# Setup database to azure app-service
+
+# Create a bash variable that specifies connection string
+
+DB_CONNECTION_STRING="Server=tcp:tailspin-space-game-sql-2029.database.windows.net,1433;Initial Catalog=tailspindatabase;Persist Security Info=False;User ID=sqldatabaseadmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# Configure the connection string to the database in each App Service environment
+
+az webapp config connection-string set \
+  --name tailspin-space-game-web-dev-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --settings "DefaultConnection=$DB_CONNECTION_STRING" \
+  --connection-string-type SQLAZURE
+
+az webapp config connection-string set \
+  --name tailspin-space-game-web-test-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --settings "DefaultConnection=$DB_CONNECTION_STRING" \
+  --connection-string-type SQLAZURE
+
+az webapp config connection-string set \
+  --name tailspin-space-game-web-staging-$webappsuffix \
+  --resource-group tailspin-space-game-rg \
+  --settings "DefaultConnection=$DB_CONNECTION_STRING" \
+  --connection-string-type SQLAZURE
+
+
+# Create a Azure function app instance
+
+az functionapp create \
+  --name $leaderboardName \
+  --resource-group $rgName \
+  --storage-account $storageName \
+  --consumption-plan-location westus
+
+

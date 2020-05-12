@@ -1,0 +1,25 @@
+{
+  "type": "Repository",
+  "id": 201422624,
+  "name": "web",
+  "active": true,
+  "events": [
+    "pull_request",
+    "push"
+  ],
+  "config": {
+    "content_type": "json",
+    "insecure_ssl": "0",
+    "url": "http://13.64.178.18:8080/github-webhook/"
+  },
+  "updated_at": "2020-04-14T20:15:31Z",
+  "created_at": "2020-04-14T20:15:31Z",
+  "url": "https://api.github.com/repos/durgasai/jenkinsworkspace/hooks/201422624",
+  "test_url": "https://api.github.com/repos/durgasai/jenkinsworkspace/hooks/201422624/test",
+  "ping_url": "https://api.github.com/repos/durgasai/jenkinsworkspace/hooks/201422624/pings",
+  "last_response": {
+    "code": 200,
+    "status": "active",
+    "message": "OK"
+  }
+}

@@ -8,6 +8,7 @@ pipelineJob('WB_Dev_MVN_Build'){
     triggers {
         githubPush()
     }
+
     definition {
         cps {
             script(readFileFromWorkspace('./workbench/builds/pipeline_scripts/wb_mvn_project.groovy'))

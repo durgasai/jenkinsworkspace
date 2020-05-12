@@ -1,3 +1,3 @@
-# jenkinsworkspace
-# Welcome to Job DSL
-# Testing repo from local
+# github api
+
+http://api.github.com/api/v3/repos

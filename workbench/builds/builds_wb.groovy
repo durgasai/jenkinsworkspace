@@ -1,22 +1,4 @@
 pipelineJob('WB_Dev_MVN_Build'){
-    publishers {
-        plotBuildData {
-            plot('Exciting plots', 'excitement.csv') {
-                title('X vs Y')
-                yAxis('Y')
-                numberOfBuilds(42)
-                useDescriptions()
-                keepRecords()
-                excludeZero()
-                logarithmic()
-                yAxisMinimum(10.0)
-                yAxisMaximum(100.0)
-                propertiesFile('my_data.properties') {
-                    label('Builds')
-                }
-            }
-        }
-    }
     logRotator {
         numToKeep(5)
     }

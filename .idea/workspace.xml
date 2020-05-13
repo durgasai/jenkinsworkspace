@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f282b1c-15e8-432f-9ea6-0345416e11ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/workbench/builds/pipeline_scripts/wb_mvn_project.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/workbench/builds/pipeline_scripts/wb_mvn_project.groovy" afterDir="false" />
+    <list default="true" id="0f282b1c-15e8-432f-9ea6-0345416e11ba" name="Default Changelist" comment="added !!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workbench/builds/builds_wb.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/workbench/builds/builds_wb.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,8 +194,26 @@
       <option name="project" value="LOCAL" />
       <updated>1587480619380</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added !!!">
+      <created>1589400139547</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1589400139547</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing from local" />
@@ -198,7 +235,14 @@
     <MESSAGE value="removed unnecessary file" />
     <MESSAGE value="Added upstream project for main seed" />
     <MESSAGE value="added githubpush" />
-    <option name="LAST_COMMIT_MESSAGE" value="added githubpush" />
+    <MESSAGE value="added !!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="added !!!" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589400142500">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589400142500" />
   </component>
   <component name="masterDetails">
     <states>

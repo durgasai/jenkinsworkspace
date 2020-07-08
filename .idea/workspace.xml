@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f282b1c-15e8-432f-9ea6-0345416e11ba" name="Default Changelist" comment="added plotBuilddata">
-      <change beforePath="$PROJECT_DIR$/workbench/builds/builds_wb.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/workbench/builds/builds_wb.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workbench/builds/pipeline_scripts/wb_mvn_project.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/workbench/builds/pipeline_scripts/wb_mvn_project.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jenkinsworkspace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jenkinsworkspace.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsl_meta_seed_labs.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/dsl_meta_seed_labs.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptapproval.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/scriptapproval.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TF_FMT" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588337512418" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -221,6 +226,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing from local" />

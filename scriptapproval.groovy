@@ -1,4 +1,4 @@
-job('script_approval')
+pipelineJob('script_approval')
         {
             definition {
                 cps {
